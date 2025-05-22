@@ -13,11 +13,13 @@
             width: 100%;
             font-family: sans-serif;
         }
+
         .container {
             position: relative;
             height: 100vh;
             width: 100vw;
         }
+
         .bg-video {
             position: absolute;
             top: 0;
@@ -28,16 +30,40 @@
             height: 100%;
             z-index: 0;
         }
+
         .overlay-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
-            font-size: 2rem;
             text-align: center;
             z-index: 1;
+            color: white;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            padding: 0 1rem;
+            max-width: 90vw;
+        }
+
+        .overlay-text img {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+        }
+
+        .overlay-text div {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .overlay-text div {
+                font-size: 1.1rem;
+            }
+
+            .overlay-text img {
+                height: 100px;
+                width: auto;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -66,8 +92,13 @@
         >
     </video>
     <div class="overlay-text">
-        <div class="relative xl:right-6 w-full md:h-[180px]"><img draggable="false" alt="Codyfight Logo" data-sentry-element="Image" data-sentry-source-file="Intro.tsx" fetchpriority="high" width="692" height="164" decoding="async" data-nimg="1" style="color:transparent" src="https://codyfight-web.b-cdn.net/website-v2/landing/logo-header-v4.webp"></div>
-        <i>Under Maintenance</i>
+        <img
+                draggable="false"
+                alt="Codyfight Logo"
+                src="https://codyfight-web.b-cdn.net/website-v2/landing/logo-header-v4.webp"
+        />
+        <br><br>
+        <div>Codyfight is currently offline.<br>But legends don’t die — they evolve ⚡</div>
     </div>
 </div>
 </body>
